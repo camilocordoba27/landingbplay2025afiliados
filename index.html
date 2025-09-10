@@ -57,4 +57,15 @@
     </script>
 
 </body>
+
+<script>
+  function sendHeight(){
+    const h = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
+    window.parent.postMessage({type:'setHeight', height:h}, '*');
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  setInterval(sendHeight, 800);
+</script>
+
 </html>
