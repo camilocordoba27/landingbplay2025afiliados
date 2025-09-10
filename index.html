@@ -43,9 +43,17 @@
             
             <div class="divider"></div>
             
-            <button class="register-button">Contactate a WhatsApp</button>
+            <button class="register-button" onclick="redirectToPage()">Contactate a WhatsApp</button>
             
         </div>
     </div>
+
+      <script>
+         function redirectToPage() {
+        window.location.href = '';
+        window.location.href = 'https://api.whatsapp.com/send/?phone=+5493364390798&text=%C2%A1Hola%21+Quiero+obtener+mi+usuario+para+el+casino+online&type=phone_number&app_absent=0';
+    }
+    </script>
+
 </body>
 </html>
