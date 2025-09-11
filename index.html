@@ -24,7 +24,7 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=1270075934447748&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
- 
+
 </head>
 <body>
     <!-- Elementos decorativos del fondo -->
@@ -63,7 +63,7 @@ src="https://www.facebook.com/tr?id=1270075934447748&ev=PageView&noscript=1"
             
             <div class="divider"></div>
             
-            <button class="register-button" onclick="redirectToPage()">Contactate a WhatsApp</button>
+            <button class="register-button" id="btn-whatsapp" onclick="redirectToPage()">Contactate a WhatsApp</button>
             
         </div>
     </div>
@@ -77,14 +77,27 @@ src="https://www.facebook.com/tr?id=1270075934447748&ev=PageView&noscript=1"
 
 </body>
 
-<script>
-  function sendHeight(){
-    const h = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
-    window.parent.postMessage({type:'setHeight', height:h}, '*');
-  }
-  window.addEventListener('load', sendHeight);
-  window.addEventListener('resize', sendHeight);
-  setInterval(sendHeight, 800);
-</script>
+  <script>
+    // Ajuste de altura para iframe
+    function sendHeight(){
+      const h = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
+      window.parent.postMessage({type:'setHeight', height:h}, '*');
+    }
+    window.addEventListener('load', sendHeight);
+    window.addEventListener('resize', sendHeight);
+    setInterval(sendHeight, 800);
+
+    // Botón de WhatsApp con evento Pixel
+    document.getElementById("btn-whatsapp").addEventListener("click", function(e) {
+      e.preventDefault(); // Evita redirección inmediata
+      fbq('track', 'Contact'); // Dispara el evento en Meta
+
+      // Espera 300ms para asegurar que se envíe el evento antes de redirigir
+      setTimeout(function() {
+        window.location.href = 'https://wa.link/t7h6g1';
+      }, 300);
+    });
+  </script>
+
 
 </html>
