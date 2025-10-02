@@ -217,7 +217,7 @@
         }
 
     
-@media (max-width: 436px) {
+@media (max-width: 640px) {
     .container {
         flex-direction: column;
         padding: 10px;
@@ -235,6 +235,7 @@
     .register-section {
         text-align: center;
         padding: 0 10px;
+        overflow: auto;
     }
 
     .brand-name img {
