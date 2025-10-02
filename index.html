@@ -8,7 +8,7 @@
     <link rel="icon" href="img/bplayico.ico">
     <title>Bplay - Registro</title>
 
-    <!-- Meta Pixel Code -->
+     Meta Pixel Code 
     <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -19,29 +19,30 @@
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '2839570876248798');
+    fbq('track', 'PageView'); // Agregado el evento PageView que faltaba
     </script>
     <noscript>
         <img height="1" width="1" style="display:none"
         src="https://www.facebook.com/tr?id=2839570876248798&ev=PageView&noscript=1"
         alt="Meta Pixel">
     </noscript>
-    <!-- End Meta Pixel Code -->
+     End Meta Pixel Code 
 </head>
 <body>
-    <!-- Elementos decorativos del fondo -->
+     Elementos decorativos del fondo 
     <div class="bg-circle bg-circle-1" aria-hidden="true"></div>
     <div class="bg-circle bg-circle-2" aria-hidden="true"></div>
     <div class="bg-circle bg-circle-3" aria-hidden="true"></div>
     
     <main class="container">
-        <!-- Sección del logo -->
+         Sección del logo 
         <section class="logo-section" aria-label="Logo de Bplay">
             <div class="logo-container">
                 <div class="main-circle">
                     <img src="img/logobplay.png" width="390" height="390" alt="Logo Bplay" class="logo-img">
                 </div>
                 
-                <!-- Círculos decorativos -->
+                 Círculos decorativos 
                 <div class="decorative-circle deco-1" aria-hidden="true"></div>
                 <div class="decorative-circle deco-2" aria-hidden="true"></div>
                 <div class="decorative-circle deco-3" aria-hidden="true"></div>
@@ -49,7 +50,7 @@
             </div>
         </section>
 
-        <!-- Sección de registro -->
+         Sección de registro 
         <section class="register-section">
             <h1 class="brand-name">
                 <img src="img/bplay18.png" width="400" height="auto" alt="Bplay +18">
@@ -73,19 +74,27 @@
 
     <footer>
       <p>EL JUEGO COMPULSIVO ES PERJUDICIAL PARA VOS Y TU FAMILIA.</p>
-      <img src="/img/global-spinner-moneda-3D-25062024.gif" style="width: 60px">
+      <img src="/img/global-spinner-moneda-3D-25062024.gif" style="width: 60px" alt="Moneda girando">
     </footer>
 
-    <script src="script.js">
-
-//           document.getElementById("btn-whatsapp").addEventListener("click", function(e) {
-//     e.preventDefault();
-//     fbq('track', 'Contact'); // o 'Lead'
-//     setTimeout(() => {
-//       window.location.href = 'https://wa.link/x4vdpr';
-//     }, 300);
-//   });
-  
+     <!-- Script del pixel movido fuera del tag de script.js y descomentado  -->
+    <script>
+      document.getElementById("btn-whatsapp").addEventListener("click", function(e) {
+        e.preventDefault();
+        
+        // Enviar evento de Contact a Facebook Pixel
+        if (typeof fbq !== 'undefined') {
+          fbq('track', 'Contact');
+        }
+        
+        // Esperar 300ms para que el pixel registre el evento antes de redirigir
+        setTimeout(() => {
+          window.location.href = 'https://wa.link/x4vdpr';
+        }, 300);
+      });
     </script>
+    
+     <!-- Cargar script.js si tiene otras funcionalidades  -->
+    <!-- <script src="script.js"></script> -->
 </body>
 </html>
