@@ -223,6 +223,10 @@
         padding: 10px;
         overflow: auto;
     }
+    
+    .body {
+         overflow: auto;
+    }
 
     .main-circle {
         width: 180px;
