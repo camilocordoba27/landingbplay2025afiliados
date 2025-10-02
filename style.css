@@ -1,286 +1,297 @@
- * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-        body {
-            font-family: 'Arial', sans-serif;
-            height: 100vh;
-            background: linear-gradient(135deg, #00ff88 0%, #00cc6a 30%, #1a1a1a 70%, #000000 100%);
-            overflow: hidden;
-            position: relative;
-            min-height: 100vh;
-        }
+body {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #00ff88 0%, #00cc6a 30%, #1a1a1a 70%, #000 100%);
+  position: relative;
+  overflow-x: hidden;
+}
 
-        
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding: 2rem 5%;
+  position: relative;
+  z-index: 10;
+}
 
-        .container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            height: 100vh;
-            padding: 0 5%;
-            position: relative;
-            z-index: 10;
-        }
+/* Elementos decorativos del fondo */
+.bg-circle {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
 
-        /* Elementos decorativos del fondo */
-        .bg-circle {
-            position: absolute;
-            border-radius: 50%;
-            background: rgba(0, 255, 136, 0.3);
-        }
+.bg-circle-1 {
+  width: 200px;
+  height: 200px;
+  top: 10%;
+  right: 15%;
+  background: rgba(0, 255, 136, 0.2);
+}
 
-        .bg-circle-1 {
-            width: 200px;
-            height: 200px;
-            top: 10%;
-            right: 15%;
-            background: rgba(0, 255, 136, 0.2);
-        }
+.bg-circle-2 {
+  width: 150px;
+  height: 150px;
+  top: 60%;
+  right: 5%;
+  background: rgba(0, 255, 136, 0.15);
+}
 
-        .bg-circle-2 {
-            width: 150px;
-            height: 150px;
-            top: 60%;
-            right: 5%;
-            background: rgba(0, 255, 136, 0.15);
-        }
+.bg-circle-3 {
+  width: 100px;
+  height: 100px;
+  top: 30%;
+  right: 35%;
+  background: rgba(0, 255, 136, 0.1);
+}
 
-        .bg-circle-3 {
-            width: 100px;
-            height: 100px;
-            top: 30%;
-            right: 35%;
-            background: rgba(0, 255, 136, 0.1);
-        }
+/* Logo y elementos de la izquierda */
+.logo-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-        /* Logo y elementos de la izquierda */
-        .logo-section {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-        }
+.logo-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-        .logo-container {
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+.main-circle {
+  width: 350px;
+  height: 350px;
+  background: #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #00ff88;
+  overflow: hidden;
+}
 
-        .main-circle {
-            width: 350px;
-            height: 350px;
-            background: #000000;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            border: 3px solid #00ff88;
-        }
+.logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
 
-        .logo-text {
-            font-size: 4rem;
-            font-weight: bold;
-            color: #00ff88;
-            letter-spacing: -2px;
-        }
+/* Círculos decorativos alrededor del logo */
+.decorative-circle {
+  position: absolute;
+  border-radius: 50%;
+  background: #00ff88;
+  pointer-events: none;
+}
 
-        /* Círculos decorativos alrededor del logo */
-        .decorative-circle {
-            position: absolute;
-            border-radius: 50%;
-            background: #00ff88;
-        }
+.deco-1 {
+  width: 80px;
+  height: 80px;
+  top: -40px;
+  left: 50px;
+}
 
-         .deco-1 {
-            width: 80px;
-            height: 80px;
-            top: -40px;
-            left: 50px;
-        }
+.deco-2 {
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: -30px;
+}
 
-        .deco-2 {
-            width: 60px;
-            height: 60px;
-            bottom: 20px;
-            right: -30px;
-        }
+.deco-3 {
+  width: 40px;
+  height: 40px;
+  top: 80px;
+  right: -60px;
+}
 
-        .deco-3 {
-            width: 40px;
-            height: 40px;
-            top: 80px;
-            right: -60px;
-        }
+.deco-4 {
+  width: 120px;
+  height: 120px;
+  bottom: -60px;
+  left: -40px;
+}
 
-        .deco-4 {
-            width: 120px;
-            height: 120px;
-            bottom: -60px;
-            left: -40px;
-        }
+/* Sección de registro */
+.register-section {
+  flex: 1;
+  padding-left: 5rem;
+  color: #fff;
+}
 
-        /* Círculo +18 */
-        .age-circle {
-            position: absolute;
-            bottom: -20px;
-            right: 20px;
-            width: 80px;
-            height: 80px;
-            background: #00ff88;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #000000;
-        }
+.brand-name {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1.25rem;
+}
 
-        /* Sección de registro */
-        .register-section {
-            flex: 1;
-            padding-left: 80px;
-            color: white;
-            margin-bottom: 2rem;
-        }
+.brand-name img {
+  max-width: 100%;
+  height: auto;
+}
 
-        .brand-name {
-            font-size: 3rem;
-            font-weight: bold;
-            color: #00ff88;
-            margin-bottom: 20px;
-            letter-spacing: -1px;
-        }
+.welcome-text {
+  font-size: 1.1rem;
+  margin-bottom: 0.625rem;
+  color: #ccc;
+}
 
-        .welcome-text {
-            font-size: 1.1rem;
-            margin-bottom: 10px;
-            color: #cccccc;
-        }
+.bonus-text {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1.875rem;
+  line-height: 1.2;
+}
 
-        .bonus-text {
-            font-size: 2.5rem;
-            font-weight: bold;
-            margin-bottom: 30px;
-            line-height: 1.2;
-        }
+.gift-icon {
+  display: inline-block;
+  margin-left: 0.625rem;
+  font-size: 2rem;
+}
 
-        .gift-icon {
-            display: inline-block;
-            margin-left: 10px;
-            font-size: 2rem;
-        }
+.divider {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #00ff88 0%, transparent 100%);
+  margin: 1.875rem 0;
+}
 
-        .divider {
-            width: 100%;
-            height: 2px;
-            background: linear-gradient(90deg, #00ff88 0%, transparent 100%);
-            margin: 30px 0;
-        }
+.register-button {
+  background: #00ff88;
+  color: #000;
+  border: none;
+  padding: 0.938rem 3.75rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
 
-        .register-button {
-            background: #00ff88;
-            color: #000000;
-            border: none;
-            padding: 15px 60px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            border-radius: 8px;
-            cursor: pointer;
-            margin-bottom: 20px;
-            transition: all 0.3s ease;
-        }
+.register-button:hover {
+  background: #00cc6a;
+  transform: translateY(-2px);
+}
 
-        .register-button:hover {
-            background: #00cc6a;
-            transform: translateY(-2px);
-        }
+.register-button:active {
+  transform: translateY(0);
+}
 
-        .login-text {
-            font-size: 0.9rem;
-            color: #cccccc;
-        }
+footer {
+  color: #000;
+  text-align: center;
+  padding: 0.938rem 0.625rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
 
-        .login-link {
-            color: #00ff88;
-            text-decoration: none;
-            font-weight: bold;
-        }
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 1.25rem;
+    text-align: center;
+  }
 
-        .login-link:hover {
-            text-decoration: underline;
-        }
+  .logo-section {
+    margin-bottom: 2rem;
+  }
 
-        footer{
-        color: #000000;              /* Texto blanco */
-        text-align: center;       /* Texto centrado */
-        padding: 15px 10px;       /* Espaciado */
-        font-size: 0.9rem;        /* Tamaño de texto */
-        font-weight: bold;
-        margin-top: auto;  
-        }
+  .main-circle {
+    width: 250px;
+    height: 250px;
+  }
 
-    
+  .register-section {
+    padding-left: 0;
+    padding: 0 1.25rem 1.875rem;
+  }
+
+  .brand-name {
+    font-size: 2rem;
+  }
+
+  .brand-name img {
+    width: 300px;
+  }
+
+  .bonus-text {
+    font-size: 1.8rem;
+  }
+
+  .register-button {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+
 @media (max-width: 640px) {
-    .container {
-        flex-direction: column;
-        padding: 10px;
-        text-align: center;
-    }
-    
-    .body {
-         overflow: auto;
-    }
+  .main-circle {
+    width: 180px;
+    height: 180px;
+  }
 
-    .main-circle {
-        width: 180px;
-        height: 180px;
-    }
+  .brand-name img {
+    width: 280px;
+  }
 
-    .logo-text img {
-        width: 220px; /* El logo más chico */
-    }
+  .bonus-text {
+    font-size: 1.4rem;
+    line-height: 1.3;
+  }
 
-    .register-section {
-        text-align: center;
-        padding: 0px 20px 30px;
-    }
+  .welcome-text {
+    font-size: 1rem;
+  }
 
-    .brand-name img {
-        width: 280px; /* Reducción del título */
-    }
+  .register-button {
+    font-size: 1rem;
+    padding: 0.75rem 1.25rem;
+    max-width: 320px;
+  }
 
-    .bonus-text {
-        font-size: 1.4rem;
-        line-height: 1.3;
-    }
+  footer {
+    font-size: 0.8rem;
+    padding: 0.75rem 0.5rem;
+  }
 
-    .welcome-text {
-        font-size: 1rem;
-    }
+  /* Ajuste de círculos decorativos */
+  .deco-1 {
+    width: 50px;
+    height: 50px;
+    top: -80px;
+    left: 30px;
+  }
 
-    .register-button {
-        font-size: 1rem;
-        padding: 12px 20px;
-        width: 90%;
-        max-width: 320px;
-    }
-    
-    footer {
-        font-size: 0.8rem;
-        padding: 12px 8px;
-    }
+  .deco-2 {
+    width: 40px;
+    height: 40px;
+    bottom: -30px;
+    right: -20px;
+  }
 
-    /* Ajuste de círculos decorativos */
-    .deco-1 { width: 50px; height: 50px; top: -80px; left: 30px; }
-    .deco-2 { width: 40px; height: 40px; bottom: -30px; right: -20px; }
-    .deco-3 { width: 30px; height: 30px; top: -30px; right: -50px; }
-    .deco-4 { width: 80px; height: 80px; bottom: -60px; left: -80px; }
+  .deco-3 {
+    width: 30px;
+    height: 30px;
+    top: -30px;
+    right: -50px;
+  }
+
+  .deco-4 {
+    width: 80px;
+    height: 80px;
+    bottom: -60px;
+    left: -80px;
+  }
 }
