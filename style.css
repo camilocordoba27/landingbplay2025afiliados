@@ -221,6 +221,7 @@
     .container {
         flex-direction: column;
         padding: 10px;
+        overflow: auto;
     }
 
     .main-circle {
@@ -235,7 +236,6 @@
     .register-section {
         text-align: center;
         padding: 0 10px;
-        overflow: auto;
     }
 
     .brand-name img {
