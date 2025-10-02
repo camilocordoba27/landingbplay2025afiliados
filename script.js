@@ -34,6 +34,6 @@ if (whatsappBtn) {
 }
 
 // Limpiar intervalo cuando se abandona la página
-window.addEventListener("beforeunload", () => {
-  clearInterval(heightInterval)
-})
+// window.addEventListener("beforeunload", () => {
+//   clearInterval(heightInterval)
+// })
