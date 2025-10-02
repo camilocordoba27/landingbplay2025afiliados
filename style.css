@@ -148,6 +148,7 @@
             flex: 1;
             padding-left: 80px;
             color: white;
+            margin-bottom: 2rem;
         }
 
         .brand-name {
@@ -215,6 +216,15 @@
 
         .login-link:hover {
             text-decoration: underline;
+        }
+
+        footer{
+        color: #000000;              /* Texto blanco */
+        text-align: center;       /* Texto centrado */
+        padding: 15px 10px;       /* Espaciado */
+        font-size: 0.9rem;        /* Tamaño de texto */
+        font-weight: bold;
+        margin-top: auto;  
         }
 
     
