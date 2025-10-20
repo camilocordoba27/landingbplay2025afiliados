@@ -1,37 +1,17 @@
-// Ajuste de altura para iframe
-function sendHeight() {
-  const h = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight)
-  window.parent.postMessage({ type: "setHeight", height: h }, "*")
-}
+let countdown = 5
+const countdownElement = document.getElementById("countdown")
 
-window.addEventListener("load", sendHeight)
-window.addEventListener("resize", sendHeight)
+// Actualizar el contador cada segundo
+const countdownInterval = setInterval(() => {
+  countdown--
+  if (countdownElement) {
+    countdownElement.textContent = countdown
+  }
 
-// Actualizar altura periódicamente
-const heightInterval = setInterval(sendHeight, 800)
-
-// Botón de WhatsApp con evento Pixel
-const whatsappBtn = document.getElementById("btn-whatsapp")
-const whatsappUrl = "https://wa.link/x4vdpr"
-
-// Declare the fbq variable before using it
-let fbq
-
-if (whatsappBtn) {
-  whatsappBtn.addEventListener("click", (e) => {
-    e.preventDefault()
-
-    // Dispara el evento en Meta Pixel
-    if (typeof fbq !== "undefined") {
-      fbq("track", "Contact")
-    }
-
-    // Redirige después de un breve delay para asegurar el tracking
-    setTimeout(() => {
-      window.location.href = whatsappUrl
-    }, 300)
-  })
-}
+  if (countdown <= 0) {
+    clearInterval(countdownInterval)
+  }
+}, 1000)
 
 // Limpiar intervalo cuando se abandona la página
 window.addEventListener("beforeunload", () => {

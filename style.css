@@ -7,7 +7,12 @@
 body {
   font-family: Arial, sans-serif;
   min-height: 100vh;
+  /* Added responsive background image properties */
   background: linear-gradient(135deg, #00ff88 0%, #00cc6a 30%, #1a1a1a 70%, #000 100%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   position: relative;
   overflow-x: hidden;
 }
@@ -20,6 +25,9 @@ body {
   padding: 2rem 5%;
   position: relative;
   z-index: 10;
+  /* Added max-width and centering for desktop */
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 /* Elementos decorativos del fondo */
@@ -71,15 +79,13 @@ body {
 .main-circle {
   width: 350px;
   height: 350px;
-  background: #000000;
+  background: #000;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   border: 3px solid #00ff88;
   overflow: hidden;
-  box-shadow: 0px 9px 30px 10px rgb(59, 59, 59);
-
 }
 
 .logo-img {
@@ -102,7 +108,6 @@ body {
   height: 80px;
   top: -40px;
   left: 50px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .deco-2 {
@@ -110,7 +115,6 @@ body {
   height: 60px;
   bottom: 20px;
   right: -30px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .deco-3 {
@@ -118,7 +122,6 @@ body {
   height: 40px;
   top: 80px;
   right: -60px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .deco-4 {
@@ -126,7 +129,6 @@ body {
   height: 120px;
   bottom: -60px;
   left: -40px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 /* Sección de registro */
@@ -134,6 +136,13 @@ body {
   flex: 1;
   padding-left: 5rem;
   color: #fff;
+  /* Added blurred background effect */
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 3rem;
+  border: 1px solid rgba(0, 255, 136, 0.2);
 }
 
 .brand-name {
@@ -150,7 +159,7 @@ body {
 .welcome-text {
   font-size: 1.1rem;
   margin-bottom: 0.625rem;
-  color: #ffffff;
+  color: #ccc;
 }
 
 .bonus-text {
@@ -195,7 +204,7 @@ body {
 }
 
 footer {
-  color: #00cc6a;
+  color: #000;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -212,128 +221,59 @@ footer {
     flex-direction: column;
     padding: 1.25rem;
     text-align: center;
+    /* Removing min-height and changing justify-content to prevent extra space */
+    min-height: auto;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 
   .logo-section {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
+    /* Removing flex: 1 to prevent stretching */
+    flex: none;
   }
 
   .main-circle {
     width: 250px;
     height: 250px;
-    box-shadow: 0px 9px 30px 10px rgb(59, 59, 59);
-  }
-  
-  .main-circle img{
-    width: 378px;
-    height: 378px;
   }
 
   .register-section {
-    padding-left: 0;
-    padding: 4rem 1.25rem 1.875rem;
+    padding: 1.5rem 1.25rem;
+    width: 100%;
+    margin-top: 1rem;
+    /* Removing flex: 1 to prevent stretching */
+    flex: none;
   }
 
   .brand-name {
     font-size: 2rem;
+    /* Reduced bottom margin */
+    margin-bottom: 0.75rem;
   }
 
   .brand-name img {
-    width: 200px;
+    width: 300px;
   }
 
   .bonus-text {
     font-size: 1.8rem;
+    /* Reduced bottom margin */
+    margin-bottom: 1rem;
+  }
+
+  /* Added divider margin reduction for mobile */
+  .divider {
+    margin: 1rem 0;
   }
 
   .register-button {
     width: 100%;
     max-width: 350px;
-  }
-  .decorative-circle {
-  position: absolute;
-  border-radius: 50%;
-  background: #00ff88;
-  pointer-events: none;
-}
-
-.deco-1 {
-  width: 80px;
-  height: 80px;
-  top: -59px;
-  left: 50px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-}
-
-.deco-2 {
-  width: 60px;
-  height: 60px;
-  bottom: -20px;
-  right: -45px;
-}
-
-.deco-3 {
-  width: 40px;
-  height: 40px;
-  top: 80px;
-  right: -60px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-}
-
-.deco-4 {
-  width: 120px;
-  height: 120px;
-  bottom: -90px;
-  left: -40px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-}
-
-.bg-circle-1{
-  width: 200px;
-  height: 200px;
-  top: 10%;
-  right: 15%;
-  background: rgba(0, 255, 136, 0.2);
-}
-
-.bg-circle-3{
-  width: 100px;
-  height: 100px;
-  top: 36%;
-  right: 5%;
-  background: rgba(0, 255, 136, 0.1);
-}
-}
-
-@media (max-width: 640px) {
-  .main-circle {
-    width: 200px;
-    height: 200px;
-  }
-
-  .main-circle img{
-    width: 280px;
-    height: 280px;
-  }
-
-
-  .brand-name img {
-    width: 200px;
-  }
-
-  .bonus-text {
-    font-size: 1.4rem;
-    line-height: 1.3;
-  }
-
-  .welcome-text {
-    font-size: 1rem;
-  }
-
-  .register-button {
-    font-size: 1.2rem;
-    padding: 0.75rem 1.25rem;
-    max-width:320px;
+    /* Eliminando margen inferior del botón */
+    margin-bottom: 0;
   }
 
   footer {
@@ -343,49 +283,188 @@ footer {
   }
 
   footer img {
-    width: 60px !important;
+    width: 70px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  /* Aumentando el padding superior en pantallas muy pequeñas */
+  .container {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    /* Ensuring min-height is auto for small screens too */
+    min-height: auto;
   }
 
-  .decorative-circle {
-  position: absolute;
-  border-radius: 50%;
-  background: #00ff88;
-  pointer-events: none;
+  .main-circle {
+    width: 180px;
+    height: 180px;
+  }
+
+  .brand-name img {
+    width: 280px;
+  }
+
+  .bonus-text {
+    font-size: 1.4rem;
+    line-height: 1.3;
+  }
+
+  .welcome-text {
+    font-size: 1rem;
+    /* Reduced bottom margin */
+    margin-bottom: 0.5rem;
+  }
+
+  .register-button {
+    font-size: 1rem;
+    padding: 0.75rem 1.25rem;
+    max-width: 320px;
+  }
+
+  /* Ajustando margen superior para pantallas pequeñas */
+  .register-section {
+    padding: 1.25rem 1rem;
+    margin-top: 1rem;
+  }
+
+  footer {
+    font-size: 0.7rem;
+    padding: 0.75rem 0.5rem;
+    gap: 0.5rem;
+  }
+
+  footer img {
+    width: 70px !important;
+  }
 }
 
-.regalo{
-  width: 3vh;
+/* Estilos para la notificación de redirección */
+.redirect-notification {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: fadeIn 0.3s ease;
 }
 
-.deco-1 {
-  width: 80px;
-  height: 80px;
-  top: -59px;
-  left: 50px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+.notification-content {
+  text-align: center;
+  color: #fff;
+  padding: 2rem;
 }
 
-.deco-2 {
+.spinner {
   width: 60px;
   height: 60px;
-  bottom: -20px;
-  right: -45px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  border: 4px solid rgba(0, 255, 136, 0.2);
+  border-top: 4px solid #00ff88;
+  border-radius: 50%;
+  margin: 0 auto 1.5rem;
+  animation: spin 1s linear infinite;
 }
 
-.deco-3 {
-  width: 40px;
-  height: 40px;
-  top: 80px;
-  right: -45px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+.notification-content h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #00ff88;
 }
 
-.deco-4 {
-  width: 120px;
-  height: 120px;
-  bottom: -70px;
-  left: -40px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+.notification-content p {
+  font-size: 1.2rem;
+  color: #ccc;
 }
+
+#countdown {
+  color: #00ff88;
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 640px) {
+  /* Aumentando el padding superior en pantallas muy pequeñas */
+  .container {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    /* Ensuring min-height is auto for small screens too */
+    min-height: auto;
+  }
+
+  .main-circle {
+    width: 180px;
+    height: 180px;
+  }
+
+  .brand-name img {
+    width: 280px;
+  }
+
+  .bonus-text {
+    font-size: 1.4rem;
+    line-height: 1.3;
+  }
+
+  .welcome-text {
+    font-size: 1rem;
+    /* Reduced bottom margin */
+    margin-bottom: 0.5rem;
+  }
+
+  .register-button {
+    font-size: 1rem;
+    padding: 0.75rem 1.25rem;
+    max-width: 320px;
+  }
+
+  /* Ajustando margen superior para pantallas pequeñas */
+  .register-section {
+    padding: 1.25rem 1rem;
+    margin-top: 1rem;
+  }
+
+  footer {
+    font-size: 0.7rem;
+    padding: 0.75rem 0.5rem;
+    gap: 0.5rem;
+  }
+
+  footer img {
+    width: 70px !important;
+  }
+  /* Ajustes responsive para la notificación */
+  .notification-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .notification-content p {
+    font-size: 1rem;
+  }
+
+  #countdown {
+    font-size: 2rem;
+  }
 }

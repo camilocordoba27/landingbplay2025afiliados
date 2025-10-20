@@ -30,6 +30,15 @@
      <!-- End Meta Pixel Code  -->
 </head>
 <body>
+    <!-- Agregando notificación de redirección -->
+    <div class="redirect-notification" id="redirectNotification">
+        <div class="notification-content">
+            <div class="spinner"></div>
+            <h2>Espera <span id="countdown">5</span> segundos</h2>
+            <p>Estamos redirigiéndote a WhatsApp</p>
+        </div>
+    </div>
+    
      <!-- Elementos decorativos del fondo  -->
     <div class="bg-circle bg-circle-1" aria-hidden="true"></div>
     <div class="bg-circle bg-circle-2" aria-hidden="true"></div>
@@ -92,6 +101,22 @@
           window.location.href = 'https://wa.link/x4vdpr';
         }, 300);
       });
+
+      let countdown = 5
+const countdownElement = document.getElementById("countdown")
+
+// Actualizar el contador cada segundo
+const countdownInterval = setInterval(() => {
+  countdown--
+  if (countdownElement) {
+    countdownElement.textContent = countdown
+  }
+
+  if (countdown <= 0) {
+    clearInterval(countdownInterval)
+  }
+}, 1000)
+
       
     </script>
     
