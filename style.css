@@ -101,7 +101,7 @@ body {
 .deco-1 {
   width: 80px;
   height: 80px;
-  top: -40px;
+  top: -20px;
   left: 50px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
@@ -110,7 +110,7 @@ body {
   width: 60px;
   height: 60px;
   bottom: 20px;
-  right: -30px;
+  right: 0px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
@@ -118,15 +118,15 @@ body {
   width: 40px;
   height: 40px;
   top: 80px;
-  right: -60px;
+  right: -19px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .deco-4 {
-  width: 120px;
-  height: 120px;
-  bottom: -60px;
-  left: -40px;
+  width: 130px;
+  height: 130px;
+  bottom: -30px;
+  left: -10px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
@@ -395,13 +395,13 @@ footer {
 
 @media (max-width: 640px) {
   .main-circle {
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
   }
 
   .main-circle img{
-    width: 280px;
-    height: 280px;
+    width: 400px;
+    height: 400px;
   }
 
 
@@ -446,35 +446,44 @@ footer {
 }
 
 .deco-1 {
-  width: 80px;
-  height: 80px;
-  top: -59px;
-  left: 50px;
+  width: 150px;
+  height: 150px;
+  top: -21px;
+  left: 0px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .deco-2 {
-  width: 60px;
-  height: 60px;
-  bottom: -20px;
-  right: -45px;
+  width: 120px;
+  height: 120px;
+  bottom: 0px;
+  right: -10px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .deco-3 {
   width: 40px;
   height: 40px;
-  top: 80px;
-  right: -45px;
+  top: 29px;
+  right: 10px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .deco-4 {
-  width: 120px;
-  height: 120px;
-  bottom: -70px;
-  left: -40px;
+  width: 90px;
+  height: 90px;
+  bottom: -3px;
+  left: 5px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
+
+.deco-5 {
+  width: 20px;
+  height: 20px;
+  bottom: 103px;
+  left: -25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
 
 }
