@@ -176,7 +176,7 @@ body {
 
 .register-button {
   background: #00ff88;
-  color: #000;
+  color: #000000;
   border: none;
   padding: 0.938rem 3.75rem;
   font-size: 1.2rem;
@@ -486,4 +486,106 @@ footer {
 }
 
 
+}
+
+
+
+/* ============================================
+                  EFECTOS LETRAS
+   ============================================ */
+
+/* Contenedor del cursor parpadeante */
+.cursor {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid #00ff88;
+  padding-right: 5px;
+}
+
+/* Animación del texto typewriter */
+.typewriter-animation {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typewriter 6s steps(60) 0.5s infinite normal both, blinkingCursor 500ms steps(30) infinite normal;
+    color: #ffffff;
+  font-size: 4vh;
+}
+
+.parrafo{
+    font-size: 2vh;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* Keyframe para el efecto de escritura */
+@keyframes typewriter {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/* Keyframe para el cursor parpadeante */
+@keyframes blinkingCursor {
+  0%,
+  49% {
+    border-color: #00ff88;
+  }
+  50%,
+  100% {
+    border-color: transparent;
+  }
+}
+
+/* ============================================
+   RESPONSIVE - AJUSTES PARA PANTALLAS PEQUEÑAS
+   ============================================ */
+
+/* Tablets y pantallas medianas */
+@media (max-width: 768px) {
+  .typewriter-animation {
+    animation: typewriter 5s steps(25) 0.5s infinite normal both, blinkingCursor 500ms steps(25) infinite normal;
+    font-size: 2.5vh;
+  }
+
+  .cursor {
+    border-right-width: 2px;
+  }
+
+  .parrafo{
+    font-size: 1.8vh;
+}
+
+}
+
+/* Móviles */
+@media (max-width: 480px) {
+  .cursor {
+    border-right-width: 2px;
+    padding-right: 3px;
+    /* Asegura que el texto no se corte */
+    max-width: 100%;
+  }
+
+  .typewriter-animation {
+    /* Animación más lenta para pantallas pequeñas */
+    animation: typewriter 6s steps(20) 0.5s infinite normal both, blinkingCursor 500ms steps(20) infinite normal;
+    /* Asegura que el texto completo sea visible */
+    max-width: 100%;
+  }
+}
+
+/* Pantallas muy pequeñas */
+@media (max-width: 360px) {
+  .typewriter-animation {
+    /* Animación aún más lenta para textos largos */
+    animation: typewriter 7s steps(15) 0.5s infinite normal both, blinkingCursor 500ms steps(15) infinite normal;
+  }
 }
