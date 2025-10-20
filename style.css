@@ -79,6 +79,7 @@ body {
   border: 3px solid #00ff88;
   overflow: hidden;
   box-shadow: 0px 9px 30px 10px rgb(59, 59, 59);
+  z-index: 2;
 
 }
 
