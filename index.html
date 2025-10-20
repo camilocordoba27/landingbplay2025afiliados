@@ -79,6 +79,8 @@
             <button class="register-button" id="btn-whatsapp" type="button">
                 Contactate a WhatsApp
             </button>
+
+            <span data-v-7f25af69="" class="loader_icon" style="width: 120px; height: 120px;"></span>
         </div>
     </main>
 
@@ -102,20 +104,20 @@
         }, 300);
       });
 
-      let countdown = 5
-const countdownElement = document.getElementById("countdown")
+       let countdown = 5
+ const countdownElement = document.getElementById("countdown")
 
-// Actualizar el contador cada segundo
-const countdownInterval = setInterval(() => {
-  countdown--
-  if (countdownElement) {
-    countdownElement.textContent = countdown
-  }
+ // Actualizar el contador cada segundo
+ const countdownInterval = setInterval(() => {
+   countdown--
+   if (countdownElement) {
+     countdownElement.textContent = countdown
+   }
 
-  if (countdown <= 0) {
-    clearInterval(countdownInterval)
-  }
-}, 1000)
+   if (countdown <= 0) {
+     clearInterval(countdownInterval)
+   }
+ }, 1000)
 
       
     </script>
