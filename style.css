@@ -132,8 +132,8 @@ body {
 
 
 .deco-5 {
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   bottom: 130px;
   left: -22px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
@@ -355,36 +355,45 @@ footer {
 }
 
 .deco-1 {
-  width: 80px;
-  height: 80px;
-  top: -59px;
-  left: 50px;
+  width: 130px;
+  height: 130px;
+  top: -20px;
+  left: 2px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .deco-2 {
-  width: 60px;
-  height: 60px;
-  bottom: -20px;
-  right: -45px;
+  width: 120px;
+  height: 120px;
+  bottom: 27px;
+  right: -20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .deco-3 {
-  width: 40px;
-  height: 40px;
-  top: 80px;
-  right: -60px;
+  width: 30px;
+  height: 30px;
+  top: 1px;
+  right: 14px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .deco-4 {
-  width: 120px;
-  height: 120px;
-  bottom: -90px;
-  left: -40px;
+  width: 100px;
+  height: 100px;
+  bottom: -15px;
+  left: 1px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
+
+.deco-5 {
+  width: 30px;
+  height: 30px;
+  bottom: 90px;
+  left: -22px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
 .bg-circle-1{
   width: 200px;
   height: 200px;
@@ -487,8 +496,8 @@ footer {
 }
 
 .deco-5 {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   bottom: 103px;
   left: -25px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
