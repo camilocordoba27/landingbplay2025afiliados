@@ -99,34 +99,43 @@ body {
 }
 
 .deco-1 {
-  width: 80px;
-  height: 80px;
-  top: -20px;
-  left: 50px;
+  width: 180px;
+  height: 180px;
+  top: -50px;
+  left: 0px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .deco-2 {
-  width: 60px;
-  height: 60px;
-  bottom: 20px;
-  right: 0px;
+  width: 120px;
+  height: 120px;
+  bottom: 27px;
+  right: -20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .deco-3 {
   width: 40px;
   height: 40px;
-  top: 80px;
-  right: -19px;
+  top: 30px;
+  right: 14px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .deco-4 {
-  width: 130px;
-  height: 130px;
-  bottom: -30px;
+  width: 150px;
+  height: 140px;
+  bottom: -20px;
   left: -10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+
+.deco-5 {
+  width: 50px;
+  height: 50px;
+  bottom: 130px;
+  left: -22px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
