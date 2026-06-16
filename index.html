@@ -93,30 +93,15 @@ src="https://www.facebook.com/tr?id=1555682579251288&ev=PageView&noscript=1"
         e.preventDefault();
         
         // Enviar evento de Contact a Facebook Pixel
-        if (typeof fbq !== 'undefined') {
-          fbq('track', 'Contact');
-        }
+        // if (typeof fbq !== 'undefined') {
+        //   fbq('track', 'Contact');
+        // }
         
         // Esperar 300ms para que el pixel registre el evento antes de redirigir
         setTimeout(() => {
           window.location.href = 'https://wa.link/6ghn3h';
         }, 300);
       });
-
-//        let countdown = 5
-//  const countdownElement = document.getElementById("countdown")
-
- // Actualizar el contador cada segundo
-//  const countdownInterval = setInterval(() => {
-//    countdown--
-//    if (countdownElement) {
-//      countdownElement.textContent = countdown
-//    }
-
-//    if (countdown <= 0) {
-//      clearInterval(countdownInterval)
-//    }
-//  }, 1000)
 
       
     </script>
