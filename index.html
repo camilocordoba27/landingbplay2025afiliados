@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,40 +10,44 @@
     <link rel="icon" href="img/bplayico.ico">
     <title>Bplay - Registro</title>
 
- <!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1555682579251288');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1555682579251288&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1555682579251288');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=1555682579251288&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
 </head>
+
 <body>
 
-     <!-- Elementos decorativos del fondo  -->
+    <!-- Elementos decorativos del fondo  -->
     <div class="bg-circle bg-circle-1" aria-hidden="true"></div>
     <div class="bg-circle bg-circle-2" aria-hidden="true"></div>
     <div class="bg-circle bg-circle-3" aria-hidden="true"></div>
-    
+
     <main class="container">
-         <!-- Sección del logo  -->
+        <!-- Sección del logo  -->
         <section class="logo-section" aria-label="Logo de Bplay">
             <div class="logo-container">
                 <div class="main-circle">
-                    <img src="img/global-spinner-moneda-3D-25062024.gif" style="position: relative; top: 7px; right: -8px;" alt="">
+                    <img src="img/global-spinner-moneda-3D-25062024.gif"
+                        style="position: relative; top: 7px; right: -8px;" alt="">
                 </div>
-                
-                 <!-- Círculos decorativos  -->
+
+                <!-- Círculos decorativos  -->
                 <div class="decorative-circle deco-1" aria-hidden="true"></div>
                 <div class="decorative-circle deco-2" aria-hidden="true"></div>
                 <div class="decorative-circle deco-3" aria-hidden="true"></div>
@@ -51,22 +56,22 @@ src="https://www.facebook.com/tr?id=1555682579251288&ev=PageView&noscript=1"
             </div>
         </section>
 
-         <!-- Sección de registro  -->
+        <!-- Sección de registro  -->
         <div class="register-section">
             <h1 class="brand-name">
                 <img src="img/bplaylogo.png" width="250" height="auto" alt="Bplay +18">
             </h1>
-            
+
             <p class="cursor typewriter-animation parrafo">Con tu carga de $4.000 obtené</p> <br>
-            
+
             <h2 class="cursor typewriter-animation">
-                $14.000 Y 
+                $14.000 Y
                 100 TIROS DE REGALO
                 <img src="img/regalosvg.svg" class="regalo" alt="">
             </h2>
-            
+
             <div class="divider" aria-hidden="true"></div>
-            
+
             <button class="register-button" id="btn-whatsapp" type="button">
                 HABLAR POR WHATSAPP
             </button>
@@ -76,29 +81,32 @@ src="https://www.facebook.com/tr?id=1555682579251288&ev=PageView&noscript=1"
     </main>
 
     <footer>
-      <p>EL JUEGO COMPULSIVO ES PERJUDICIAL PARA VOS Y TU FAMILIA.</p>
+        <p>EL JUEGO COMPULSIVO ES PERJUDICIAL PARA VOS Y TU FAMILIA.</p>
     </footer>
 
-     <!-- Script del pixel movido fuera del tag de script.js y descomentado  -->
+    <!-- Script del pixel movido fuera del tag de script.js y descomentado  -->
     <script>
-      document.getElementById("btn-whatsapp").addEventListener("click", function(e) {
-        e.preventDefault();
-        
-        // Enviar evento de Contact a Facebook Pixel
-        // if (typeof fbq !== 'undefined') {
-        //   fbq('track', 'Contact');
-        // }
-        
-        // Esperar 300ms para que el pixel registre el evento antes de redirigir
-        setTimeout(() => {
-          window.location.href = 'https://wa.link/6ghn3h';
-        }, 300);
-      });
+        const btnWhatsapp = document.getElementById("btn-whatsapp");
 
-      
+        btnWhatsapp.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            if (typeof fbq !== "undefined") {
+                fbq("track", "AddPaymentInfo", {
+                    value: 5000,
+                    currency: "ARS"
+                });
+            }
+
+            setTimeout(() => {
+                window.location.href = "https://wa.link/6ghn3h";
+            }, 300);
+        });
+
     </script>
-    
-     <!-- Cargar script.js si tiene otras funcionalidades  -->
+
+    <!-- Cargar script.js si tiene otras funcionalidades  -->
     <!-- <script src="script.js"></script> -->
 </body>
+
 </html>
